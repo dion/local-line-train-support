@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photo Mode Guide – Local Line</title>
+<meta name="description" content="How to use photo mode in Local Line: getting in, moving the camera, the CAMERA, TRAIN, SCENE, LOOK and CHALLENGES panels, saving, sharing and the gallery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto+Mono:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* The photo mode screen, drawn over a picture from the game: where everything sits. */
+  .screen { position: relative; aspect-ratio: 2712 / 1220; border-radius: 14px; overflow: hidden; background: #111 url(img/kaze.jpg) center / cover; container-type: inline-size; margin: 16px 0 6px; }
+  .screen .z { position: absolute; display: flex; gap: .6cqw; align-items: center; flex-wrap: wrap; }
+  .screen .chip { font-size: 1.35cqw; padding: .7cqw 1cqw; border-radius: .45cqw; }
+  .screen .tl { top: 2.2cqw; left: 5.6cqw; flex-direction: column; align-items: flex-start; gap: .4cqw; }
+  .screen .tl b { font: 700 1.6cqw/1 "Roboto Condensed", sans-serif; text-shadow: 0 1px 4px #000; }
+  .screen .tl span { font-size: 1.2cqw; color: rgba(255,255,255,.75); text-shadow: 0 1px 4px #000; }
+  .screen .tr { top: 2.2cqw; right: 2.4cqw; }
+  .screen .cr { right: 2.6cqw; top: 50%; transform: translateY(-50%); flex-direction: column; gap: 1cqw; }
+  .screen .shutter { width: 7cqw; height: 7cqw; border-radius: 50%; border: .5cqw solid #fff; background: rgba(255,255,255,.25); }
+  .screen .thumb { width: 6cqw; height: 3.6cqw; border-radius: .5cqw; border: .2cqw solid #fff; background: url(img/tower18.jpg) center / cover; }
+  .screen .bl { left: 5.6cqw; bottom: 2.2cqw; right: 14cqw; flex-direction: column; align-items: flex-start; gap: .8cqw; }
+  .screen .bl .row { display: flex; gap: .6cqw; align-items: center; flex-wrap: wrap; }
+  .screen .slider { width: 14cqw; height: .4cqw; border-radius: 1cqw; background: linear-gradient(90deg, var(--amber) 35%, rgba(255,255,255,.3) 35%); }
+  .screen .label { font-size: 1.35cqw; text-shadow: 0 1px 4px #000; }
+  .tag { position: absolute; display: grid; place-items: center; width: 3.6cqw; height: 3.6cqw; border-radius: 50%; background: var(--go); color: #000; font: 700 1.9cqw/1 "Roboto Condensed", sans-serif; box-shadow: 0 0 0 .35cqw rgba(0,0,0,.35); }
+  .key { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 18px; }
+  .key li { display: flex; gap: 10px; align-items: baseline; margin: 4px 0; font-size: 15px; color: var(--ink-soft); }
+  .key li b { flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--go); color: #000; font: 700 13px/1 "Roboto Condensed", sans-serif; }
+  .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+  .shots figure { margin: 0; }
+  @media (max-width: 560px) { .shots { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar"><a class="mark" href="photo-mode.html"><i></i>Local Line<span>&nbsp;· support</span></a><nav><a href="photo-mode.html" aria-current="page">Photo guide</a><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a></nav></header>
+
+<div class="hero" style="background-image:url(img/kaze.jpg)"><div>
+  <div class="kick"><i></i>How to</div>
+  <h1>Photo mode</h1>
+  <p class="meta">Stop the world, walk round your train and take the picture. For Local Line on Android and iPhone.</p>
+</div></div>
+
+<main>
+<section class="sheet lead">
+  <p>Photo mode freezes the game where you are and hands you a camera. Nothing moves until you leave: the clock, the timetable and every penalty wait for you, so you can take as long as you like over a shot. Pictures go straight to your phone's photos and into the game's own <strong>gallery</strong>.</p>
+  <ol class="toc">
+    <li><a href="#in">Getting in and out</a></li>
+    <li><a href="#screen">The screen</a></li>
+    <li><a href="#move">Moving the camera</a></li>
+    <li><a href="#camera">CAMERA: views and lens</a></li>
+    <li><a href="#pan">Panning shots</a></li>
+    <li><a href="#train">TRAIN: where it stands</a></li>
+    <li><a href="#scene">SCENE: time and weather</a></li>
+    <li><a href="#look">LOOK: frame and finish</a></li>
+    <li><a href="#blur">Blur and focus</a></li>
+    <li><a href="#challenges">CHALLENGES</a></li>
+    <li><a href="#save">Taking and sharing</a></li>
+    <li><a href="#gallery">The gallery</a></li>
+    <li><a href="#pro">Pro tools</a></li>
+    <li><a href="#tips">Tips</a></li>
+  </ol>
+</section>
+
+<section class="sheet" id="in">
+  <h2><span class="n">01</span>Getting in and out</h2>
+  <p>There are three ways in:</p>
+  <ul>
+    <li><strong>During a run:</strong> tap the small <strong>camera tile</strong> in the cab, between the horn and the exit. The run pauses exactly where you are, with your own train and line.</li>
+    <li><strong>After a run:</strong> tap <span class="chip">PHOTO</span> on the finish screen.</li>
+    <li><strong>From the train picker:</strong> open <span class="chip">TRAIN</span> on the title and tap <span class="chip">PHOTO</span>. This is the garage: your train posed on the open line, with every other train a tap away.</li>
+  </ul>
+  <p>Tap <span class="chip on">DONE</span> at the top right to leave. From a run, you pick up exactly where you stopped, with the clock where it was.</p>
+</section>
+
+<section class="sheet" id="screen">
+  <h2><span class="n">02</span>The screen</h2>
+  <div class="screen" role="img" aria-label="The photo mode screen: title and hint top left, GALLERY, HIDE and DONE top right, the shutter on the right, the panels and tabs along the bottom.">
+    <div class="z tl"><b>PHOTO MODE · KAZE</b><span>Drag to orbit · pinch to zoom · two fingers to pan · double tap to reset</span></div>
+    <div class="z tr"><span class="chip">GALLERY</span><span class="chip">HIDE</span><span class="chip on">DONE</span></div>
+    <div class="z cr"><div class="shutter"></div><div class="thumb"></div></div>
+    <div class="z bl">
+      <div class="row"><span class="label">PANNING</span><span class="chip on">OFF</span><span class="chip">PAN</span><span class="chip">ROLL</span></div>
+      <div class="row"><span class="chip">VIEW 3/4 FRONT</span><span class="chip">RESET</span><span class="label">LENS 35 mm</span><span class="slider"></span><span class="chip">2×</span></div>
+      <div class="row"><span class="chip tab">CAMERA</span><span class="chip">TRAIN</span><span class="chip">SCENE</span><span class="chip">LOOK</span><span class="chip">CHALLENGES</span></div>
+    </div>
+    <span class="tag" style="left:1cqw;top:2cqw">1</span>
+    <span class="tag" style="right:22cqw;top:1.8cqw">2</span>
+    <span class="tag" style="right:12cqw;top:40cqw">3</span>
+    <span class="tag" style="left:1cqw;bottom:9cqw">4</span>
+    <span class="tag" style="left:1cqw;bottom:1.4cqw">5</span>
+  </div>
+  <ul class="key">
+    <li><b>1</b>The train's name and what your fingers do right now.</li>
+    <li><b>2</b><span><span class="chip">GALLERY</span>, <span class="chip">HIDE</span> (clears the screen; tap anywhere to bring it back) and <span class="chip on">DONE</span>.</span></li>
+    <li><b>3</b>The shutter, and under it your last picture.</li>
+    <li><b>4</b>The open panel's settings. They wrap onto more lines on a narrow phone.</li>
+    <li><b>5</b>The tabs. The one in amber is open.</li>
+  </ul>
+  <p>Chips with an amber outline are switched on. A small yellow <span class="chip">2×<span class="ad">AD</span></span> badge marks a <a href="#pro">pro tool</a>.</p>
+</section>
+
+<section class="sheet" id="move">
+  <h2><span class="n">03</span>Moving the camera</h2>
+  <p>The camera has two kinds of eye, chosen on the <span class="label">EYE</span> line of <span class="chip tab">CAMERA</span>.</p>
+  <h3>Orbit (the default)</h3>
+  <p>The camera circles a point on the train, like a drone on a tether.</p>
+  <div class="scroll"><table>
+    <tr><th>Gesture</th><th>What it does</th></tr>
+    <tr><td>Drag</td><td>Orbit round the train: sideways goes round it, up and down raises or lowers the camera.</td></tr>
+    <tr><td>Pinch</td><td>Move in close or back away.</td></tr>
+    <tr><td>Two-finger drag</td><td>Slide the point you are looking at along the train and up or down.</td></tr>
+    <tr><td>Double tap</td><td>Put the view back.</td></tr>
+  </table></div>
+  <h3>Trackside</h3>
+  <p><span class="chip on">TRACKSIDE</span> puts you on your feet beside the line, like a real photographer: the camera stays where you stand and only the lens changes.</p>
+  <div class="scroll"><table>
+    <tr><th>Gesture</th><th>What it does</th></tr>
+    <tr><td>Drag</td><td>Walk over the ground.</td></tr>
+    <tr><td>Pinch</td><td>Zoom the lens.</td></tr>
+    <tr><td>Two-finger drag</td><td>Move where you are aiming.</td></tr>
+    <tr><td>Double tap</td><td>Put the view back.</td></tr>
+  </table></div>
+  <p>With the trackside eye, <span class="label">HEIGHT</span> sets how high you hold the camera: crouch by the rails or stand on a bank. <span class="label">TILT</span> leans the picture for a dramatic angle; drags still go the way you would expect on a level picture.</p>
+  <div class="tip">The camera keeps itself out of buildings and tunnel walls. If the view jumps a little as you orbit, it is stepping round something solid.</div>
+</section>
+
+<section class="sheet" id="camera">
+  <h2><span class="n">04</span>CAMERA: views and lens</h2>
+  <ul>
+    <li><span class="chip">VIEW 3/4 FRONT</span> steps through set-up views: <strong>3/4 front, nose, side, door, bogie, gangway, roof and 3/4 rear</strong>. Start from one and fine-tune with your fingers.</li>
+    <li><span class="chip">RESET</span> puts the current view, lens and tilt back.</li>
+    <li><span class="label">LENS</span> runs from <strong>16 mm</strong> (very wide, close and dramatic) to <strong>135 mm</strong> (long, flat and far away). Around 35 to 50 mm looks most like your own eye.</li>
+    <li><span class="chip">2×</span> saves the still at twice the screen's size, for a sharper picture to crop or print. It is a <a href="#pro">pro tool</a>.</li>
+    <li><span class="label">VIEWS</span> keeps four cameras of your own. Tap an empty <span class="chip">+1</span> to save the camera there; tap a full <span class="chip on">★1</span> to jump back to it. To replace one, tap <span class="chip">SAVE</span> and then the slot (it shows <span class="chip">↓1</span>). Saved views remember the eye, the lens and the tilt, and work on any train.</li>
+  </ul>
+</section>
+
+<section class="sheet" id="pan">
+  <h2><span class="n">05</span>Panning shots</h2>
+  <p>The line at the top of <span class="chip tab">CAMERA</span> turns a still into a moving shot. The game takes a quick burst and blends it, like a real camera with a slow shutter; the screen says <strong>DEVELOPING…</strong> for a second or two.</p>
+  <ul>
+    <li><span class="chip">PAN</span>: the camera swings with a passing train. The train stays sharp and the background streaks.</li>
+    <li><span class="chip">ROLL</span>: the camera rides along beside the train. The train is pin sharp and the ground and lineside rush past.</li>
+    <li><span class="label">SPEED</span> is how fast the train is going in the shot; it starts at your speed in the run.</li>
+    <li><span class="label">SHUTTER</span> is how long the shutter stays open. Longer means more streak.</li>
+  </ul>
+  <div class="tip"><b>PAN works best side-on with a long lens.</b> From the 3/4 front the train is coming towards you, so it blurs too. Try <span class="chip">VIEW SIDE</span> at 85 mm or more, or use <span class="chip">ROLL</span> for an easy sharp train.</div>
+  <p>Panning shots are a <a href="#pro">pro tool</a> and always save at the screen's size.</p>
+</section>
+
+<section class="sheet" id="train">
+  <h2><span class="n">06</span>TRAIN: where it stands</h2>
+  <ul>
+    <li><strong>Place:</strong> the slider moves the train anywhere along the line, with a tick under it at every station. <span class="chip">◀ STOP</span> and <span class="chip">STOP ▶</span> jump to the station before or after. <span class="chip">HERE</span> is where your run stopped, <span class="chip">PLATFORM</span> the nearest station and <span class="chip">OPEN LINE</span> a clear stretch between stations.</li>
+    <li><strong>Train:</strong> in the garage, <span class="chip">◀</span> and <span class="chip">▶</span> change the train.</li>
+    <li><span class="chip">◀ CAR</span> and <span class="chip">CAR ▶</span> move the camera one car along.</li>
+    <li><span class="chip">DOORS SHUT</span> steps through <strong>shut</strong>, <strong>open</strong> and <strong>working</strong> (opening and closing).</li>
+  </ul>
+  <h3>A second train</h3>
+  <p><span class="label">2ND TRAIN</span> brings another train onto the other track. <span class="chip">MEET</span> sends it towards yours; <span class="chip">ALONGSIDE</span> runs it next to yours the same way. <span class="label">GAP</span> sets how far ahead it is, and <span class="chip">LEVEL</span> lines the two noses up.</p>
+</section>
+
+<section class="sheet" id="scene">
+  <h2><span class="n">07</span>SCENE: time and weather</h2>
+  <ul>
+    <li><span class="label">TIME</span>: drag through the whole day. The low sun of early morning and evening gives long shadows and warm light; at night the windows and street lights come on.</li>
+    <li><strong>Weather:</strong> <span class="chip">☀ CLEAR</span> <span class="chip">☁ OVERCAST</span> <span class="chip">≡ FOG</span> <span class="chip">🌧 RAIN</span> <span class="chip">⛈ STORM</span> <span class="chip">❄ SNOW</span>.</li>
+    <li><span class="chip on">LAMPS ON</span> switches the train's headlamps.</li>
+  </ul>
+  <div class="shots">
+    <figure><img src="img/night.jpg" alt="A city line at night in the rain, lit windows on both sides." loading="lazy"><figcaption>Night with rain: the wet ground picks up every light.</figcaption></figure>
+    <figure><img src="img/tower18.jpg" alt="An elevated train crossing a junction between tall buildings, seen from high above." loading="lazy"><figcaption>High up and looking down over a junction.</figcaption></figure>
+  </div>
+</section>
+
+<section class="sheet" id="look">
+  <h2><span class="n">08</span>LOOK: frame and finish</h2>
+  <h3>Frame</h3>
+  <p><span class="label">FRAME</span> crops the picture: <span class="chip on">FULL SCREEN</span> <span class="chip">16:9</span> <span class="chip">3:2</span> <span class="chip">4:5</span> <span class="chip">1:1</span> <span class="chip">9:16</span>. The rest of the screen dims so you see exactly what will be saved. 4:5 and 1:1 suit social feeds; 9:16 is for stories. <span class="chip">GRID</span> adds rule-of-thirds lines (they are not saved).</p>
+  <p>Pictures carry a small caption stamp: the line, where the train stands and the train in one corner, and the date in orange film-camera figures in the other, under the game's name. Once you have removed the ads you can take it off with <span class="chip">STAMP</span>, or keep it and drop just the game's name with <span class="chip">GAME NAME</span>.</p>
+  <h3>Filters and grading</h3>
+  <p><span class="label">FILTER</span>: <span class="chip">NONE</span> <span class="chip">VIVID</span> <span class="chip">MONO</span> <span class="chip">SEPIA</span> <span class="chip">FADED</span>. Then fine-tune one at a time on the slider: <strong>exposure, contrast, saturation, warmth, vignette and grain</strong>. <span class="chip">RESET</span> takes the look back to plain.</p>
+</section>
+
+<section class="sheet" id="blur">
+  <h2><span class="n">09</span>Blur and focus</h2>
+  <p>The <span class="label">BLUR</span> line on <span class="chip tab">LOOK</span> has three settings:</p>
+  <ul>
+    <li><span class="chip">OFF</span>: everything sharp.</li>
+    <li><span class="chip">TILT-SHIFT</span>: a sharp band across the middle with blur above and below, which makes the scene look like a model railway. Best from high up looking down.</li>
+    <li><span class="chip">DEPTH</span>: a real camera's depth of field. The aperture slider goes from f/1.4 (very soft background) to f/16 (nearly everything sharp). <strong>Tap the screen to focus</strong> on that spot, or tap <span class="chip on">TRAIN</span> to keep the focus on the train. <span class="chip">BOKEH</span> opens lamps and lit windows behind the focus into round discs; try it at night with a long lens.</li>
+  </ul>
+</section>
+
+<section class="sheet" id="challenges">
+  <h2><span class="n">10</span>CHALLENGES</h2>
+  <p>The <span class="chip tab">CHALLENGES</span> tab lists today's <strong>DAILY PHOTO</strong>, shared by every player, and the photo challenges for the line you are on: a train at a level crossing at night, a meet at a station, a panning shot at speed, a long-lens shot, and more.</p>
+  <ul>
+    <li><span class="chip">SET UP</span> takes you there: it sets the place, time, weather, second train, eye, lens and frame for you. Then compose it your way.</li>
+    <li>A picture counts when it meets every need of the challenge and <strong>the train fills at least 5% of the frame</strong>. If it is close but too small, the game says so; move in or use a longer lens.</li>
+    <li>A banner says <strong>CHALLENGE DONE</strong>, the challenge is ticked, and <span class="chip">SEE PHOTO</span> opens the picture that did it. Done challenges also show in your logbook, and the finish screen hints at a challenge under its PHOTO button.</li>
+  </ul>
+</section>
+
+<section class="sheet" id="save">
+  <h2><span class="n">11</span>Taking and sharing</h2>
+  <ul>
+    <li>Tap the <strong>shutter</strong>. The screen flashes and the picture is saved to your phone's photos (an album named LocalLineDriver on Android). The first time, your phone asks if the game may add photos: it only ever adds pictures, it never reads your library.</li>
+    <li>Tap the <strong>thumbnail</strong> under the shutter to share the picture straight away. <strong>Long-press</strong> it to open it in the gallery.</li>
+    <li>Want a clean screenshot of the live view instead? Tap <span class="chip">HIDE</span>, take your phone's own screenshot, and tap anywhere to bring the controls back.</li>
+  </ul>
+</section>
+
+<section class="sheet" id="gallery">
+  <h2><span class="n">12</span>The gallery</h2>
+  <p>Every picture you save is also kept in the game's gallery, together with how it was taken. Open it from <span class="chip">GALLERY</span> in photo mode, the <span class="chip">GALLERY</span> button in the logbook or the train picker, or a long press on the thumbnail.</p>
+  <ul>
+    <li>Filter by <span class="chip on">ALL</span>, by star, or by line.</li>
+    <li>In a picture: <span class="chip">SHARE</span> sends the full-size file; <strong>★</strong> stars it; <span class="chip">DELETE</span> removes it from the game (your phone's photos keep their copy).</li>
+    <li><span class="chip">SHOOT AGAIN</span> puts the whole scene back: line, place, train, camera, lens, frame, look, time, weather, second train and doors. Change one thing and shoot a new version.</li>
+    <li>The gallery holds 300 pictures. When it is full the game offers to delete the 50 oldest without a star; starred pictures are never dropped.</li>
+  </ul>
+  <p><strong>DELETE MY DATA</strong> in the logbook also empties the gallery. See the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+</section>
+
+<section class="sheet" id="pro">
+  <h2><span class="n">13</span>Pro tools</h2>
+  <p>Most of photo mode is free: every view, the lens, both eyes, the place, time, weather, doors, lamps, frames and challenges. A few tools are pro and wear a small <span class="chip">AD<span class="ad">AD</span></span> badge:</p>
+  <ul>
+    <li>panning shots (<span class="chip">PAN</span> and <span class="chip">ROLL</span>)</li>
+    <li>filters and grading, tilt-shift and depth of field</li>
+    <li><span class="chip">2×</span> pictures</li>
+    <li>trains that do not run on the line you are on (and, from a run, any train but your own)</li>
+  </ul>
+  <p>You can try every pro tool and see it live. Only when you press the shutter does the game ask: <strong>watch one ad</strong> to use them all until you leave photo mode, or <span class="chip">TAKE IT PLAIN</span> to save the same picture without them. If you have <strong>removed the ads</strong>, every pro tool is yours with no ad.</p>
+</section>
+
+<section class="sheet" id="tips">
+  <h2><span class="n">14</span>Tips</h2>
+  <ul>
+    <li><strong>Get low.</strong> A trackside eye a little above the rails with a 24 mm lens makes any train look huge.</li>
+    <li><strong>Go long for stations.</strong> 85 to 135 mm from far down the platform stacks the canopy, lamps and train together.</li>
+    <li><strong>Golden hour.</strong> Drag TIME to just after sunrise or just before sunset for warm light and long shadows.</li>
+    <li><strong>Night and rain.</strong> Lamps on, rain or storm, depth of field with BOKEH: the lights turn into soft discs.</li>
+    <li><strong>Save your favourite angles</strong> in VIEWS, then try them on every train in the garage.</li>
+    <li><strong>Leave room.</strong> Put the train on a grid line with space ahead of the nose for it to run into.</li>
+  </ul>
+  <div class="pills"><a class="pill go" href="#in">Back to the top</a><a class="pill ghost" href="mailto:support@dionyang.com?subject=Photo%20mode">Ask a question</a></div>
+</section>
+</main>
+<footer><span>Local Line by Dion</span><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="mailto:support@dionyang.com">support@dionyang.com</a></footer>
+</body>
+</html>

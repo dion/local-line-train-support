@@ -4,31 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy – Local Line</title>
-<style>
-  :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #5d5d63; --bg: #fbfbf9; --rule: #dcdcd6; --accent: #b8860b; }
-  @media (prefers-color-scheme: dark) { :root { --fg: #e8e8e3; --muted: #a2a29c; --bg: #141416; --rule: #2e2e32; --accent: #e0b040; } }
-  body { margin: 0; padding: 2.5rem 1.25rem 4rem; background: var(--bg); color: var(--fg); font: 17px/1.6 Georgia, "Times New Roman", serif; }
-  main { max-width: 42rem; margin: 0 auto; }
-  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; }
-  h2 { font-size: 1.25rem; margin: 2.25rem 0 .5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
-  p.meta { color: var(--muted); font-size: .95rem; margin: 0 0 2rem; }
-  ul { padding-left: 1.25rem; }
-  li { margin: .35rem 0; }
-  a { color: var(--accent); }
-  table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: 1rem 0; }
-  th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid var(--rule); }
-  th { font-weight: 600; }
-  footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto+Mono:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<main>
+<header class="bar"><a class="mark" href="photo-mode.html"><i></i>Local Line<span>&nbsp;· support</span></a><nav><a href="photo-mode.html">Photo guide</a><a href="privacy-policy.html" aria-current="page">Privacy</a><a href="terms-of-service.html">Terms</a></nav></header>
+<div class="hero short" style="background-image:url(img/night.jpg)"><div>
+  <div class="kick"><i></i>Your data</div>
   <h1>Privacy Policy</h1>
   <p class="meta">Local Line for Android and iPhone (<code>com.locallinedriver</code>) · Effective 15 October 2026</p>
-
+</div></div>
+<main>
+<section class="sheet lead">
   <p>Local Line (“the app”) is a train-driving game published by Dion (“we”, “us”). This policy explains what information the app handles, why, and what choices you have. The short version: the app sends each finished run to our own server under an anonymous player ID so that the world boards can be scored; it never asks for your name, email address or any account, and the only name it holds is the one you may choose to show on the boards. It also uses Google for advertising, crash reports and optional alerts, and Google Play or Apple's App Store for in-app purchases. You can delete everything the server holds about you from inside the app. This policy covers the app on both Android and iPhone; where they differ, it says so.</p>
-
-  <h2>1. Information the app stores on your device</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">01</span>Information the app stores on your device</h2>
   <p>The app saves your progress in its private storage on your phone so that it is there the next time you play:</p>
   <ul>
     <li>Run results: scores, stop grades, ratings, streaks, and the logbook of completed runs.</li>
@@ -41,8 +34,9 @@
   </ul>
   <p>On Android the app opts out of cloud backup, so this data is not copied to your Google account. On iPhone it is part of the phone's own backup (to iCloud or a computer), like other apps' data, so restoring your phone from that backup restores your progress. Uninstalling the app deletes it from the phone; see section 8 for what stays on the server.</p>
   <p>Pictures you take in photo mode are saved to your phone's gallery (Android) or photo library (iPhone). The app only adds pictures there; it never reads or uploads your photos. For the in-app gallery it also keeps its own copy of each picture, with the settings it was taken with (line, place, train, camera, time of day and weather), in its private storage. These copies never leave your phone; they are deleted when you delete them in the gallery, use DELETE MY DATA, or remove the app. Like the rest of the app's data they are not copied to your Google account on Android, and are part of the phone's own backup on iPhone.</p>
-
-  <h2>2. Information sent to our server</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">02</span>Information sent to our server</h2>
   <p>The app talks to a server we run so that every line can have a world board and so that we can see which stations are too hard and which phones run the game badly. The server is hosted on Amazon Web Services in the United States. It receives:</p>
   <ul>
     <li><strong>Player identity.</strong> The first time it runs, the app makes a random install ID and registers it with the server, which answers with a player ID. Neither is tied to a Google account, a phone number, an email address, or the device's advertising ID. If you choose a name for the world boards, that name is stored with your player ID and shown to other players beside your scores. You do not have to pick a name to play.</li>
@@ -51,14 +45,17 @@
     <li><strong>Usage events.</strong> Small events such as a board being opened, a name being set, or alerts being switched on or off, with your player ID and a random per-session ID.</li>
   </ul>
   <p>Board rows show your chosen name, or no name, together with your points, grade and rank. Nothing on the server identifies you beyond the player ID and the name you chose.</p>
-
-  <h2>3. Alerts (optional)</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">03</span>Alerts (optional)</h2>
   <p>You can ask to be told when another player beats your best on a line. Nothing is set up unless you say yes, either on the card shown after your first run on a world board or with the <strong>ALERTS</strong> switch in <strong>SETTINGS</strong>. When you switch alerts on, the app asks Android or iOS for notification permission, asks Firebase Cloud Messaging for a push token (on iPhone, Firebase delivers through Apple's push notification service), and sends that token and your time zone to our server so that one notification can reach you, at most one a day per line and only in daytime. Switching alerts off, or deleting your data, removes the token from our server and from the phone. Firebase processes the token under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, and on iPhone Apple delivers the notification under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</p>
-
-  <h2>4. Crash reports (Firebase Crashlytics)</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">04</span>Crash reports (Firebase Crashlytics)</h2>
   <p>If the app crashes or stops responding, Firebase Crashlytics sends Google a crash report: the stack trace, the phone model and its Android or iOS version, a Firebase installation ID, and which line, train and screen the app was on. We use these reports only to find and fix bugs. Firebase Analytics is switched off in the app. Crash reports are kept by Firebase for 90 days and are processed under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
-
-  <h2>5. Advertising (Google AdMob)</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">05</span>Advertising (Google AdMob)</h2>
   <p>The free version of the app shows ads served by Google AdMob: a banner strip on the title board, the run board, the logbook and in the cab; an occasional full-screen ad after a run; and rewarded ads that you choose to watch for a perk in the game (a penalty waived, a second attempt at the daily run, a day's pass on a locked line, or keeping a streak through a retry). Rewarded ads are never shown unless you tap to watch one. Buying the ad removal through Google Play or the App Store turns off the banner and full-screen ads; rewarded ads stay available for you to choose.</p>
   <p>To request an ad, Google's Mobile Ads SDK sends Google information about your device, such as its model, operating system, language, IP address (from which an approximate location may be inferred), the app's identifier, and the device's advertising identifier: the Android advertising ID, or on iPhone the IDFA, which Google receives only if you allow tracking (below). Google uses this to select and measure ads, and, where you have allowed it, to personalise them. Google processes this information under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; how Google uses information from apps that use its services is described at <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
   <p>Your choices:</p>
@@ -68,11 +65,13 @@
     <li>On Android, you can reset or delete your advertising ID, and opt out of ad personalisation, in Android's settings under Privacy → Ads. With the advertising ID deleted, ads are non-personalised.</li>
   </ul>
   <p>Our server never receives the advertising ID or anything else from the ads SDK; we see only aggregate reports from Google about ad impressions and earnings.</p>
-
-  <h2>6. In-app purchases through Google Play and the App Store</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">06</span>In-app purchases through Google Play and the App Store</h2>
   <p>Locked lines and the ad removal can be bought through Google Play's billing system on Android, or through Apple's App Store on iPhone. Payment is handled entirely by Google or Apple; the app never sees your payment details. The store tells the app which products your Google or Apple account owns so that a purchase can be restored, including after you reinstall the app or change phones. Purchase records are kept by Google under the Google Privacy Policy and the <a href="https://play.google.com/about/play-terms/">Google Play Terms of Service</a>, or by Apple under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a> and the <a href="https://www.apple.com/legal/internet-services/itunes/">Apple Media Services Terms and Conditions</a>.</p>
-
-  <h2>7. Information we do not collect</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">07</span>Information we do not collect</h2>
   <ul>
     <li>No account, and no name other than the board name you choose.</li>
     <li>No email address, phone number, contacts, location, camera, or microphone. The app never reads your photos; photo mode only adds the pictures you take (section 1).</li>
@@ -80,20 +79,23 @@
     <li>Nothing is sold, and nothing is shared with anyone beyond the services named in this policy: Amazon Web Services, which hosts our server; Google (Play, AdMob, Firebase Crashlytics and Firebase Cloud Messaging); and, on iPhone, Apple (the App Store and push notifications).</li>
   </ul>
   <p>The Android permissions the app uses are <em>vibrate</em>, for the click of the master controller's notches; <em>Google Play billing</em>, for in-app purchases; <em>internet</em>, for our server and the ads; <em>notifications</em>, asked for only when you switch alerts on; and <em>network state</em> and the <em>advertising ID</em>, which Google's advertising SDK needs to request and show ads; on Android 7 to 9 only, <em>storage</em>, asked for the first time you save a picture in photo mode. On iPhone the app asks only for <em>notifications</em>, when you switch alerts on; <em>adding to your photo library</em>, the first time you save a picture in photo mode; and <em>tracking</em>, through the App Tracking Transparency prompt described in section 5.</p>
-
-  <h2>8. Where data is kept and for how long</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">08</span>Where data is kept and for how long</h2>
   <ul>
     <li>Data saved by the app stays in the app's private storage on your phone, which other apps cannot read, until you clear the app's data in Android settings or delete the app (and, on iPhone, from any phone backup that holds it).</li>
     <li>Run reports, usage events and board rows are stored on Amazon Web Services in the United States and sent over HTTPS. Rows on the day boards expire after 90 days and rows on the week boards after 2 years; all-time board rows and run reports are kept while your player record exists. Copies of run reports and usage events in our statistics archive are kept indefinitely, marked with the player ID only (see section 9).</li>
     <li>Push tokens are kept only while alerts are on.</li>
     <li>Crash reports are kept by Firebase for 90 days. Data held by Google for ads, purchases and messaging is retained according to Google's policies.</li>
   </ul>
-
-  <h2>9. Deleting your data</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">09</span>Deleting your data</h2>
   <p>Open the logbook from the title board and tap <strong>DELETE MY DATA</strong>. The server removes your player record, your name, your push token, your run reports and your rows on every world board, and the app wipes its records on the phone. This cannot be undone. Copies of run reports and usage events kept in our statistics archive stay there, marked only with the player ID; because the player record and name are gone, nothing links them to you or to your phone any longer. Lines and the ad removal you have bought are restored from Google Play or the App Store. Uninstalling the app without deleting first leaves the anonymous run reports on the server; email us (section 14) with your board name and we will remove them.</p>
-
-  <h2>10. Summary of data handling</h2>
-  <table>
+</section>
+<section class="sheet">
+  <h2><span class="n">10</span>Summary of data handling</h2>
+  <div class="scroll"><table>
     <tr><th>Data</th><th>Where it goes</th><th>Purpose</th><th>Required?</th></tr>
     <tr><td>Scores, records, logbook, settings</td><td>Your device</td><td>Saving your progress</td><td>Yes, to play</td></tr>
     <tr><td>Install ID and player ID</td><td>Our server (AWS, United States)</td><td>Telling your runs apart from everyone else's</td><td>Yes, to play</td></tr>
@@ -106,21 +108,25 @@
     <tr><td>Purchase ownership</td><td>Google Play or the App Store, then to the app and our server (product and purchase token)</td><td>Unlocking bought lines and the ad removal</td><td>No, only if you buy</td></tr>
     <tr><td>Device details, IP address, advertising ID (Android) or IDFA (iPhone, only if you allow tracking)</td><td>Google AdMob</td><td>Requesting, showing and measuring ads</td><td>Yes, whenever an ad is requested; personalisation and tracking are your choice</td></tr>
     <tr><td>Photos you take in photo mode</td><td>Your phone's gallery or photo library, and a copy in the app's private storage for the in-app gallery</td><td>Keeping your pictures</td><td>No, only when you save one</td></tr>
-  </table>
-
-  <h2>11. Children</h2>
+  </table></div>
+</section>
+<section class="sheet">
+  <h2><span class="n">11</span>Children</h2>
   <p>The app is a general-audience game and is not directed at children under 13, and we do not knowingly collect data from them. Ads are requested from Google as described in section 5. Google and Apple require an account of a qualifying age to make purchases; those age rules are theirs.</p>
-
-  <h2>12. Your rights</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">12</span>Your rights</h2>
   <p>You can delete everything the server holds about you at any time with DELETE MY DATA (section 9), and you can see your own board entries and run history in the app. Because we hold no name, email address or account for you, we cannot look up your data from a request alone; if you email us with your board name we will find and remove your records. Progress on your phone is under your control through your phone's app settings. Purchase history is under your control through your Google or Apple account, and advertising choices through the AD CHOICES row in SETTINGS and your phone's ad and tracking settings. Depending on where you live you may have further rights, such as access, correction, portability or objection; contact us and we will respond.</p>
-
-  <h2>13. Changes to this policy</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">13</span>Changes to this policy</h2>
   <p>If the app's data handling changes, for example if a future version sends data anywhere new, we will update this page and change the effective date at the top. Continued use of the app after a change means you accept the updated policy.</p>
-
-  <h2>14. Contact</h2>
+</section>
+<section class="sheet">
+  <h2><span class="n">14</span>Contact</h2>
   <p>Dion<br>Email: <a href="mailto:support@dionyang.com">support@dionyang.com</a> (the address behind the <strong>FEEDBACK</strong> row in <strong>SETTINGS</strong>)</p>
-
-  <footer>See also the <a href="terms-of-service.html">Terms of Service</a>.</footer>
+</section>
 </main>
+<footer>See also the <a href="terms-of-service.html">Terms of Service</a>. <span>Questions? <a href="mailto:support@dionyang.com">support@dionyang.com</a></span></footer>
 </body>
 </html>

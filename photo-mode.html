@@ -10,21 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto+Mono:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <style>
-  /* The photo mode screen, drawn over a picture from the game: where everything sits. */
-  .screen { position: relative; aspect-ratio: 2712 / 1220; border-radius: 14px; overflow: hidden; background: #111 url(img/kaze.jpg) center / cover; container-type: inline-size; margin: 16px 0 6px; }
-  .screen .z { position: absolute; display: flex; gap: .6cqw; align-items: center; flex-wrap: wrap; }
-  .screen .chip { font-size: 1.35cqw; padding: .7cqw 1cqw; border-radius: .45cqw; }
-  .screen .tl { top: 2.2cqw; left: 5.6cqw; flex-direction: column; align-items: flex-start; gap: .4cqw; }
-  .screen .tl b { font: 700 1.6cqw/1 "Roboto Condensed", sans-serif; text-shadow: 0 1px 4px #000; }
-  .screen .tl span { font-size: 1.2cqw; color: rgba(255,255,255,.75); text-shadow: 0 1px 4px #000; }
-  .screen .tr { top: 2.2cqw; right: 2.4cqw; }
-  .screen .cr { right: 2.6cqw; top: 50%; transform: translateY(-50%); flex-direction: column; gap: 1cqw; }
-  .screen .shutter { width: 7cqw; height: 7cqw; border-radius: 50%; border: .5cqw solid #fff; background: rgba(255,255,255,.25); }
-  .screen .thumb { width: 6cqw; height: 3.6cqw; border-radius: .5cqw; border: .2cqw solid #fff; background: url(img/tower18.jpg) center / cover; }
-  .screen .bl { left: 5.6cqw; bottom: 2.2cqw; right: 14cqw; flex-direction: column; align-items: flex-start; gap: .8cqw; }
-  .screen .bl .row { display: flex; gap: .6cqw; align-items: center; flex-wrap: wrap; }
-  .screen .slider { width: 14cqw; height: .4cqw; border-radius: 1cqw; background: linear-gradient(90deg, var(--amber) 35%, rgba(255,255,255,.3) 35%); }
-  .screen .label { font-size: 1.35cqw; text-shadow: 0 1px 4px #000; }
+  /* The photo mode screen as captured on a phone, with numbered tags over it. */
+  .screen { position: relative; border-radius: 14px; overflow: hidden; container-type: inline-size; margin: 16px 0 6px; background: #111; }
+  .screen img { display: block; width: 100%; height: auto; }
   .tag { position: absolute; display: grid; place-items: center; width: 3.6cqw; height: 3.6cqw; border-radius: 50%; background: var(--go); color: #000; font: 700 1.9cqw/1 "Roboto Condensed", sans-serif; box-shadow: 0 0 0 .35cqw rgba(0,0,0,.35); }
   .key { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 18px; }
   .key li { display: flex; gap: 10px; align-items: baseline; margin: 4px 0; font-size: 15px; color: var(--ink-soft); }
@@ -77,25 +65,18 @@
 
 <section class="sheet" id="screen">
   <h2><span class="n">02</span>The screen</h2>
-  <div class="screen" role="img" aria-label="The photo mode screen: title and hint top left, GALLERY, HIDE and DONE top right, the shutter on the right, the panels and tabs along the bottom.">
-    <div class="z tl"><b>PHOTO MODE · KAZE</b><span>Drag to orbit · pinch to zoom · two fingers to pan · double tap to reset</span></div>
-    <div class="z tr"><span class="chip">GALLERY</span><span class="chip">HIDE</span><span class="chip on">DONE</span></div>
-    <div class="z cr"><div class="shutter"></div><div class="thumb"></div></div>
-    <div class="z bl">
-      <div class="row"><span class="label">PANNING</span><span class="chip on">OFF</span><span class="chip">PAN</span><span class="chip">ROLL</span></div>
-      <div class="row"><span class="chip">VIEW 3/4 FRONT</span><span class="chip">RESET</span><span class="label">LENS 35 mm</span><span class="slider"></span><span class="chip">2×</span></div>
-      <div class="row"><span class="chip tab">CAMERA</span><span class="chip">TRAIN</span><span class="chip">SCENE</span><span class="chip">LOOK</span><span class="chip">CHALLENGES</span></div>
-    </div>
-    <span class="tag" style="left:1cqw;top:2cqw">1</span>
-    <span class="tag" style="right:22cqw;top:1.8cqw">2</span>
-    <span class="tag" style="right:12cqw;top:40cqw">3</span>
-    <span class="tag" style="left:1cqw;bottom:9cqw">4</span>
-    <span class="tag" style="left:1cqw;bottom:1.4cqw">5</span>
+  <div class="screen">
+    <img src="img/photo-screen.jpg" width="1600" height="720" alt="Photo mode on a phone: the title and hint top left, HOW TO, GALLERY, HIDE and DONE top right, the shutter and the last picture on the right, the CAMERA panel's settings and the tabs along the bottom left.">
+    <span class="tag" style="left:42%;top:4%">1</span>
+    <span class="tag" style="left:67.4%;top:3.4%">2</span>
+    <span class="tag" style="left:86.2%;top:31%">3</span>
+    <span class="tag" style="left:1%;top:54%">4</span>
+    <span class="tag" style="left:1%;top:89.5%">5</span>
   </div>
   <ul class="key">
     <li><b>1</b>The train's name and what your fingers do right now.</li>
-    <li><b>2</b><span><span class="chip">GALLERY</span>, <span class="chip">HIDE</span> (clears the screen; tap anywhere to bring it back) and <span class="chip on">DONE</span>.</span></li>
-    <li><b>3</b>The shutter, and under it your last picture.</li>
+    <li><b>2</b><span><span class="chip">HOW TO</span> (this guide), <span class="chip">GALLERY</span>, <span class="chip">HIDE</span> (clears the screen; tap anywhere to bring it back) and <span class="chip on">DONE</span>.</span></li>
+    <li><b>3</b>The shutter, and under it your last picture: tap it to share.</li>
     <li><b>4</b>The open panel's settings. They wrap onto more lines on a narrow phone.</li>
     <li><b>5</b>The tabs. The one in amber is open.</li>
   </ul>

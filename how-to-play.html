@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Play · Local Line</title>
+<meta name="description" content="How to drive in Local Line: Train Driver. The master controller, the cab display, stopping on the mark, the timetable, doors, ATC and scoring.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto+Mono:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* The cab as captured on a phone, with numbered tags over it (as the photo guide's screen). */
+  .screen { position: relative; border-radius: 14px; overflow: hidden; container-type: inline-size; margin: 16px 0 6px; background: #111; }
+  .screen img { display: block; width: 100%; height: auto; }
+  .tag { position: absolute; display: grid; place-items: center; width: 3.6cqw; height: 3.6cqw; border-radius: 50%; background: var(--go); color: #000; font: 700 1.9cqw/1 "Roboto Condensed", sans-serif; box-shadow: 0 0 0 .35cqw rgba(0,0,0,.35); }
+  .key { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 18px; }
+  .key li { display: flex; gap: 10px; align-items: baseline; margin: 4px 0; font-size: 15px; color: var(--ink-soft); }
+  .key li b { flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--go); color: #000; font: 700 13px/1 "Roboto Condensed", sans-serif; }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: center; }
+  .duo figure { margin: 0; }
+  @media (max-width: 640px) { .duo { grid-template-columns: 1fr; } }
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps li { position: relative; padding-left: 38px; margin: 10px 0; }
+  .steps li:before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 1px; width: 24px; height: 24px; border-radius: 50%; background: var(--go); color: #000; display: grid; place-items: center; font: 700 13px/1 "Roboto Condensed", sans-serif; }
+</style>
+</head>
+<body>
+<header class="bar"><a class="mark" href="index.html"><i></i>Local Line<span>&nbsp;· support</span></a><nav><a href="how-to-play.html" aria-current="page">How to play</a><a href="photo-mode.html">Photo guide</a><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a></nav></header>
+
+<div class="hero" style="background-image:url(img/tower18.jpg)"><div>
+  <div class="kick"><i></i>How to</div>
+  <h1>How to play</h1>
+  <p class="meta">Drive the line, keep the timetable, stop on the mark. For Local Line on Android and iPhone.</p>
+</div></div>
+
+<main>
+<section class="sheet lead">
+  <p>In Local Line you drive one train down one line, station to station. At every stop you are graded on two things: <strong>where you stopped</strong> and <strong>when you got there</strong>. Do both well, stop after stop, and the points multiply.</p>
+  <ol class="toc">
+    <li><a href="#first">Your first run</a></li>
+    <li><a href="#cab">The cab</a></li>
+    <li><a href="#controller">The master controller</a></li>
+    <li><a href="#limits">Speed limits and ATC</a></li>
+    <li><a href="#stop">Stopping on the mark</a></li>
+    <li><a href="#timetable">The timetable</a></li>
+    <li><a href="#doors">Doors and departures</a></li>
+    <li><a href="#score">Scoring and grades</a></li>
+    <li><a href="#lines">Lines, trains and the daily run</a></li>
+    <li><a href="#tips">Tips</a></li>
+  </ol>
+</section>
+
+<section class="sheet" id="first">
+  <h2><span class="n">01</span>Your first run</h2>
+  <ol class="steps">
+    <li>On the title screen, tap <span class="chip on">DEPART</span>. You start in the cab at the first station, doors closed.</li>
+    <li>Push the <strong>master controller</strong> (the dial in the bottom right) up into <strong>P</strong> to pull away.</li>
+    <li>Watch the <strong>limit</strong> and stay under it. Ease back to <strong>N</strong> to coast.</li>
+    <li>As the next station comes up, pull the dial down into <strong>B</strong> and brake so the train stops at the <strong>stop mark</strong>.</li>
+    <li>The doors open, passengers board, the doors close. Power up promptly and go again.</li>
+  </ol>
+  <p>The run ends at the last station. You get a grade for the whole run and a card for every stop.</p>
+</section>
+
+<section class="sheet" id="cab">
+  <h2><span class="n">02</span>The cab</h2>
+  <div class="screen">
+    <img src="img/hud.jpg" width="1600" height="736" alt="The cab on a phone: speed and limit top left, the next stop card under it, the buttons and score top right, the master controller bottom right and the weather and time bottom left.">
+    <span class="tag" style="left:27.5%;top:4%">1</span>
+    <span class="tag" style="left:27.5%;top:30%">2</span>
+    <span class="tag" style="left:56%;top:4%">3</span>
+    <span class="tag" style="left:63%;top:22%">4</span>
+    <span class="tag" style="left:70%;top:72%">5</span>
+    <span class="tag" style="left:21.5%;top:89%">6</span>
+  </div>
+  <ul class="key">
+    <li><b>1</b>Your speed and the line's speed limit.</li>
+    <li><b>2</b>The next stop: its name, the distance to it, the run clock (NOW), when you are due (DUE), and whether you are early or late. Tap it to see the stops after.</li>
+    <li><b>3</b><span><span class="chip">Reverse</span> <span class="chip">Lights</span> <span class="chip">Horn</span> <span class="chip">Exit</span></span></li>
+    <li><b>4</b>Your score and the rating so far.</li>
+    <li><b>5</b>The master controller.</li>
+    <li><b>6</b>The weather and the time of day.</li>
+  </ul>
+  <p>Tap anywhere on the open scene to change the camera: cab, chase cam, roof, rail, window and, on some trains, more. The driving does not stop while you look around.</p>
+</section>
+
+<section class="sheet" id="controller">
+  <h2><span class="n">03</span>The master controller</h2>
+  <div class="duo">
+    <figure><img src="img/f-controller.jpg" width="1200" height="750" alt="The master controller dial in brake notch B6." loading="lazy"></figure>
+    <div>
+      <p>One handle does power and braking, as on a real electric train. Drag it up or down; it clicks into notches.</p>
+      <ul>
+        <li><strong>P1 to P5</strong>: power. Higher notches pull harder.</li>
+        <li><strong>N</strong>: neutral. The train coasts.</li>
+        <li><strong>B1 to B8</strong>: the service brake, light to firm.</li>
+        <li><strong>EB</strong>: the emergency brake, at the very bottom. It stops you hardest and fastest. Save it for when you have misjudged.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tip">Trains are heavy. Brakes take time to bite and a train takes hundreds of metres to stop from speed. <b>Start braking earlier than you think</b>, then ease off as you slow.</div>
+</section>
+
+<section class="sheet" id="limits">
+  <h2><span class="n">04</span>Speed limits and ATC</h2>
+  <p>The <strong>LIMIT</strong> next to your speed is the limit where you are now. When a lower limit is coming up, a pill under your speed shows it and how far away it starts. It turns amber when it is time to brake for it.</p>
+  <p>Go over the limit and the speed card shows <strong>Overspeed</strong>, and points drain away until you are back under it.</p>
+  <p>Some lines are fitted with <strong>ATC</strong> (automatic train control). It rings a warning if you are going too fast for a limit ahead. Ignore it and it puts the brakes on for you, and the intervention costs <strong>200 points</strong> at the next stop. To get the brakes back, slow down and move the handle to <strong>N</strong>. You can switch ATC off in SETTINGS, but it is there to help you.</p>
+</section>
+
+<section class="sheet" id="stop">
+  <h2><span class="n">05</span>Stopping on the mark</h2>
+  <div class="duo">
+    <figure><img src="img/f-stop.jpg" width="1200" height="750" alt="Running into an elevated station, the stop mark a lit gate at the platform end." loading="lazy"></figure>
+    <div>
+      <p>Each platform has a <strong>stop mark</strong>: a lit gate over the line with coloured bands on the track. Stop with your cab at the mark.</p>
+      <p>As you get close, the next stop card shows how far you are from it, and whether you would be <strong>Short</strong> or <strong>Over</strong>.</p>
+    </div>
+  </div>
+  <div class="scroll"><table>
+    <tr><th>Stop</th><th>How close</th><th>Points</th></tr>
+    <tr><td>BULLSEYE</td><td>within 10 cm</td><td>500 + 300</td></tr>
+    <tr><td>PINPOINT</td><td>within 30 cm</td><td>500 + 150</td></tr>
+    <tr><td>PERFECT</td><td>within 1 m</td><td>500</td></tr>
+    <tr><td>GOOD</td><td>at the platform</td><td>300</td></tr>
+  </table></div>
+  <p>Stop too far from the platform and the doors stay shut: the card says <strong>Not at platform</strong>. Creep up, or if you overshot, tap <span class="chip">Reverse</span> while stopped and back up to the mark. The clock keeps running while you shunt.</p>
+</section>
+
+<section class="sheet" id="timetable">
+  <h2><span class="n">06</span>The timetable</h2>
+  <div class="duo">
+    <figure><img src="img/f-timetable.jpg" width="1200" height="750" alt="The next stop card: Western, 295 ft, now 03:27, due 03:31, 10 seconds late." loading="lazy"></figure>
+    <div>
+      <p>Every station has a time you are <strong>DUE</strong>. The <strong>NOW</strong> clock starts when the train first moves. The card tells you if you are on time, early or late.</p>
+      <p>Arriving is graded too: within 3 seconds of the timetable is PERFECT (500), within 10 seconds is GOOD (300), within 20 seconds is OKAY (100). Early counts the same as late, so do not race.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sheet" id="doors">
+  <h2><span class="n">07</span>Doors and departures</h2>
+  <p>Stop at the platform and the doors open by themselves. They close after the dwell; you can tap the stop card to close them sooner.</p>
+  <p>Your <strong>departure</strong> is graded at the next stop: power up within 2 seconds of the doors closing for +100, within 5 seconds for +50.</p>
+  <div class="tip">Never pull away with the doors open. It costs <b>200 points</b>.</div>
+  <p>A penalty for ATC or for the doors can sometimes be waived by watching an ad, when the game offers it.</p>
+</section>
+
+<section class="sheet" id="score">
+  <h2><span class="n">08</span>Scoring and grades</h2>
+  <p>A stop can earn up to <strong>1,000</strong> points: 500 for where you stopped and 500 for when, plus any BULLSEYE or PINPOINT bonus and your departure.</p>
+  <p><strong>Streaks:</strong> PERFECT on both the stop and the time, with no ATC, starts a streak. Each stop in a row multiplies the next by another quarter, up to double.</p>
+  <p>At the end of the run you get a grade for the whole run, out of the points on offer:</p>
+  <div class="scroll"><table>
+    <tr><th>Grade</th><th>Rating</th><th>Points on offer</th></tr>
+    <tr><td>S</td><td>EXCELLENT</td><td>90% and up</td></tr>
+    <tr><td>A</td><td>GREAT</td><td>75% and up</td></tr>
+    <tr><td>B</td><td>GOOD</td><td>55% and up</td></tr>
+    <tr><td>C</td><td>FAIR</td><td>35% and up</td></tr>
+    <tr><td>D</td><td>POOR</td><td>below 35%</td></tr>
+  </table></div>
+  <p>Run into the buffers at the end of the line, or take a crossover too fast, and the train derails. That ends the run.</p>
+</section>
+
+<section class="sheet" id="lines">
+  <h2><span class="n">09</span>Lines, trains and the daily run</h2>
+  <ul>
+    <li><span class="chip">ROUTES</span> lists every line: short commutes, express lines and long endurance runs. Locked lines open when you earn the <strong>mastery</strong> grade on the line before it (your best grade over your last five full runs), or can be bought.</li>
+    <li><span class="chip">TRAIN</span> picks the train for the line. Each drives and sounds its own way.</li>
+    <li><strong>DAILY</strong> is one run a day on each line, with the weather, time of day and a slightly tighter or looser timetable set for that day. Play it every day to keep a streak going.</li>
+    <li><span class="chip">LOGBOOK</span> keeps every run you have driven. <span class="chip">RANKS</span> and <span class="chip">WORLD</span> show the leaderboards.</li>
+    <li>The camera tile in the cab opens <a href="photo-mode.html">photo mode</a>.</li>
+  </ul>
+</section>
+
+<section class="sheet" id="tips">
+  <h2><span class="n">10</span>Tips</h2>
+  <ul>
+    <li><strong>Brake in two steps.</strong> A firm notch first to bleed off speed, then ease back to a light notch for the last few metres so you can place the train.</li>
+    <li><strong>Watch the distance, not the platform.</strong> The next stop card counts down to the mark. Your eye will lie to you from the cab.</li>
+    <li><strong>Coast.</strong> Hitting the limit and then coasting in N is often right on the timetable, and leaves you less to brake off.</li>
+    <li><strong>Read the limit pill.</strong> When it goes amber, start braking for the lower limit ahead, or ATC will do it for you.</li>
+    <li><strong>A late stop on the mark beats a fast stop past it.</strong> Points for position are as many as points for time, and an overshoot can cost you both.</li>
+    <li><strong>Learn a line.</strong> The limits, stations and timetable are the same every time you drive a line (the daily tweaks the timetable). Remember where the limits drop and where you start braking.</li>
+  </ul>
+</section>
+</main>
+
+<footer>
+  <span>© 2026 Dion · Local Line</span>
+  <a href="index.html">Home</a>
+  <a href="photo-mode.html">Photo guide</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="terms-of-service.html">Terms of Service</a>
+</footer>
+</body>
+</html>
